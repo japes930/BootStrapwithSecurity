@@ -24,7 +24,7 @@
                         <p th:inline="text">-[[${message.postedBy}]]</p>
                         <p type="date" th:text="*{message.postedDate}"></p>
                     </div>
-                    <div class="col">
+                    <div class="col link-col">
                         <a th:href="@{/edit/{id}(id=${message.id})}">Edit</a>
                         <a th:href="@{/showmsg/{id}(id=${message.id})}">Details</a>
                         <a th:href="@{/delete/{id}(id=${message.id})}">Delete</a>
