@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Message</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+    <body id="form-body">
+        <div class="container">
+            <div class="row">
+                <h1 id="msg_title">Add Message</h1>
+                <div id="form-content">
+
+                    <form action="#" th:action="@{/process}" th:object="${message}" method="post">
+
+                        <input type ="hidden" th:field="*{id}"/>
+
+                        <!--Post date/time: <p type="date" th:text="*{postedDate}"></p>-->
+                        <div class = "row justify-content-between">
+                            <h2>Title:</h2> <input type="text" th:field="*{title}"/>
+                            <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br/>
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <h2>Content:</h2> <input type="text" th:field="*{content}" />
+                        <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span><br/>
+                        </div>
+
+                        <div class="row justify-content-between">
+                        <h2>Name:</h2> <input type="text" th:field="*{postedBy}" />
+                        <span th:if="${#fields.hasErrors('postedBy')}" th:errors="*{postedBy}"></span>
+                        <!--<span th:if="${#fields.hasErrors('postedBy'}" th:errors="*{postedBy}"></span>-->
+                        <br/>
+                        </div>
+
+                        <input type="submit" class="btn btn-info btn-dark btn-block" value="Submit"/>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

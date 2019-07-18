@@ -1,0 +1,67 @@
+/******************************************/
+/*               For /list               */
+/******************************************/
+#list-body{
+    background: url("https://res.cloudinary.com/japes930/image/upload/v1563473709/OutsideWall_w3wvmk.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#list-body h1{
+    padding-top:10rem;
+    color:whitesmoke;
+    font-size:10rem;
+}
+.list-row{
+    min-height:60vh;
+    margin-top:2rem;
+}
+
+.content{
+    background: rgba(0, 0, 0, 0.5);
+    padding:1.5rem;
+}
+
+.post{
+    background-color:#dae0e5;
+    margin-top:3rem;
+    padding:0.5rem;
+}
+
+/******************************************/
+/*               For form               */
+/******************************************/
+#form-body{
+    background: url("https://res.cloudinary.com/japes930/image/upload/v1563473709/BathroomWall_ljvyw5.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#form-content{
+    position:absolute;
+    top:32rem;
+    left:52rem;
+}
+
+form h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    color: white;
+}
+
+form{
+    width:50rem;
+}
+form input{
+    width:50%;
+}
+
+#msg_title{
+    font-family: 'Permanent Marker', cursive;
+    color:black;
+    font-size:5rem;
+    position:absolute;
+    top:5rem;
+    right:20rem;
+    text-decoration: underline;
+}
