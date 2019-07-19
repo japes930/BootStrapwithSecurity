@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-    <a href="/">Show All posts</a><br/>
-    <div>
-        <h3 th:text="${message.title}"></h3>
-        <p th:text="${message.content}"></p>
-        <p th:inline="text">-[[${message.postedBy}]] [[${message.postedDate}]]</p>
-
+<body id="show-body">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="/">Show All posts</a><br/>
+            <div>
+                <h3 th:text="${message.title}"></h3>
+                <p th:text="${message.content}"></p>
+                <p th:inline="text">-[[${message.postedBy}]] [[${message.postedDate}]]</p>
+            </div>
+        </div>
     </div>
+</div>
+
 
 </body>
 </html>
