@@ -58,4 +58,8 @@ public class HomeController {
         return "redirect:/";
     }
 
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
 }
